@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LatteLab</title>
+
+    <meta
+      name="description"
+      content="LatteLab es una cafetería que ofrece una experiencia única con café de alta calidad y un ambiente acogedor."
+    />
+    <meta name="author" content="Fernando Diaz" />
+
+    <link rel="stylesheet" href="src/styles/fonts.css" />
+    <link rel="stylesheet" href="src/styles/variables.css" />
+    <link rel="stylesheet" href="src/styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__container">
+        <div class="header__logo">
+          <img
+            src="src/assets/images/layout/Coffee.svg"
+            alt="Logo de LatteLab"
+            loading="eager"
+            fetchpriority="high"
+          />
+
+          <h1>Latte<span>Lab</span></h1>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="active" href="/">Inicio</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="/src/pages/products.html">Menú</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="/src/pages/about-us.html">Nosotros</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="/src/pages/contact.html">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero__container">
+      <article class="hero__content">
+        <div class="hero__content-grid">
+          <div class="hero__text">
+            <h2 class="hero__title">Sabores que Despiertan Tus sentidos</h2>
+
+            <p class="hero__description">
+              Descubre el sabor único de nuestro café artesanal y disfruta de un
+              ambiente acogedor.
+            </p>
+
+            <a
+              href="/src/pages/products.html"
+              class="hero__button button__component"
+            >
+              Ver Menú
+            </a>
+          </div>
+
+          <div class="hero__image">
+            <img
+              src="src/assets/images/layout/coffee-hero.webp"
+              alt="Imagen de café"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <main>
+      <section class="about__container container__section">
+        <article class="about__content">
+          <div class="about__images">
+            <div class="about__image about__image-left">
+              <img
+                src="src/assets/images/layout/pexels-chevanon-324028.webp"
+                alt="Imagen de café"
+                loading="lazy"
+                class="about__img-left"
+              />
+            </div>
+
+            <img
+              class="about__blob"
+              src="src/assets/images/layout/blob.svg"
+              alt="Blob SVG"
+            />
+
+            <div class="about__image about__image-right">
+              <img
+                src="src/assets/images/layout/pexels-julieaagaard-2467287.webp"
+                alt="Imagen de café"
+                loading="lazy"
+                class="about__img-right"
+              />
+            </div>
+          </div>
+
+          <div class="about__text">
+            <h2 class="about__title title__section">Sobre Nosotros</h2>
+
+            <h3>Nuestra Pasión por el Café</h3>
+
+            <p class="about__description">
+              En LatteLab, nos apasiona el café y nos dedicamos a ofrecerte una
+              experiencia única en cada taza. Nuestro café es cuidadosamente
+              seleccionado y preparado por baristas expertos para garantizar la
+              máxima calidad y sabor.
+            </p>
+
+            <a
+              href="/src/pages/about-us.html"
+              class="about__button button__component"
+              >Leer Más</a
+            >
+          </div>
+        </article>
+      </section>
+
+      <section class="services__container container__section"></section>
+
+      <!-- <section class="categories__container container__section"></section> -->
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
