@@ -6,6 +6,8 @@
   --color-black: #2e333c;
   --color-background: #191718;
   --color-text: #d3c3b9;
+  --color-white: #ffffff;
+  --color-footer: #322c2c;
 
   --background-color: var(--color-background);
   --text-color: var(--color-text);
@@ -13,7 +15,7 @@
   /*? SIZES */
   --max-width: 1200px;
   --header-height: 80px;
-  --footer-height: 80px;
+  --footer-height: 100px;
 }
 
 body {
@@ -34,8 +36,8 @@ a {
 .container__section {
   width: 95%;
   max-width: var(--max-width);
-  margin: 0 auto;
-  height: 100dvh;
+  margin: 10rem auto;
+  /* min-height: 100dvh; */
 }
 
 .active {

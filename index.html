@@ -88,6 +88,7 @@
                 src="src/assets/images/layout/pexels-chevanon-324028.webp"
                 alt="Imagen de café"
                 loading="lazy"
+                prefetchpriority="low"
                 class="about__img-left"
               />
             </div>
@@ -96,6 +97,8 @@
               class="about__blob"
               src="src/assets/images/layout/blob.svg"
               alt="Blob SVG"
+              loading="lazy"
+              prefetchpriority="low"
             />
 
             <div class="about__image about__image-right">
@@ -103,6 +106,7 @@
                 src="src/assets/images/layout/pexels-julieaagaard-2467287.webp"
                 alt="Imagen de café"
                 loading="lazy"
+                prefetchpriority="low"
                 class="about__img-right"
               />
             </div>
@@ -129,11 +133,121 @@
         </article>
       </section>
 
-      <section class="services__container container__section"></section>
+      <section class="services__container container__section">
+        <div class="services__header">
+          <h2 class="services__title title__section">Nuestros Servicios</h2>
+          <h3>Calidad y Sabor en Cada Taza</h3>
+        </div>
 
-      <!-- <section class="categories__container container__section"></section> -->
+        <article class="services__content">
+          <div class="services__items">
+            <div class="services__item">
+              <img
+                src="/src/assets/images/services/coffee.svg"
+                alt="Café de especialidad"
+              />
+              <h3 class="services__item-title">Café de especialidad</h3>
+              <p class="services__item-description">
+                Ofrecemos una selección de cafés de alta calidad, cuidadosamente
+                seleccionados y preparados por baristas expertos para garantizar
+                una experiencia única en cada taza.
+              </p>
+            </div>
+
+            <div class="services__item">
+              <img
+                src="src/assets/images/services/croissant.svg"
+                alt="Pastelería artesanal"
+              />
+              <h3 class="services__item-title">Pastelería artesanal</h3>
+              <p class="services__item-description">
+                Nuestra pastelería artesanal ofrece una variedad de dulces y
+                postres elaborados con ingredientes frescos y de alta calidad.
+              </p>
+            </div>
+          </div>
+
+          <div class="services__items">
+            <div class="services__item">
+              <img
+                src="src/assets/images/services/delivery.svg"
+                alt="Take Away & Delivery"
+              />
+              <h3 class="services__item-title">Take Away & Delivery</h3>
+              <p class="services__item-description">
+                Ofrecemos opciones de Take Away y Delivery para que puedas
+                disfrutar de nuestros productos en la comodidad de tu hogar.
+              </p>
+            </div>
+
+            <div class="services__item">
+              <img
+                src="src/assets/images/services/experience.svg"
+                alt="Experiencias LatteLab"
+              />
+              <h3 class="services__item-title">Experiencias LatteLab</h3>
+              <p class="services__item-description">
+                En LatteLab, no solo servimos café, sino que también ofrecemos
+                experiencias únicas que combinan el arte del café con la
+                creatividad. Únete a nosotros para talleres, catas y eventos
+                especiales que celebran la cultura del café.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="categories__container container__section">
+        <div class="categories__header">
+          <h2 class="categories__title title__section">Top Categorías</h2>
+          <h3>Explora nuestras bebidas más compradas</h3>
+        </div>
+
+        <article class="categories__content">
+          <a href="src/pages/products.html" class="categories__item">
+            <div class="categories__item--text">
+              <img src="src/assets/images/categories/latte.webp" alt="Latte" />
+              <h4>Latte</h4>
+
+              <span>Ver Más</span>
+            </div>
+          </a>
+
+          <a href="src/pages/products.html" class="categories__item">
+            <div class="categories__item--text">
+              <img
+                src="src/assets/images/categories/americano.webp"
+                alt="Expresso Americano"
+              />
+              <h4>Expresso Americano</h4>
+
+              <span>Ver Más</span>
+            </div>
+          </a>
+
+          <a href="src/pages/products.html" class="categories__item">
+            <div class="categories__item--text">
+              <img
+                src="src/assets/images/categories/cappuccino.webp"
+                alt="Cappuccino"
+              />
+              <h4>Cappuccino</h4>
+
+              <span>Ver Más</span>
+            </div>
+          </a>
+        </article>
+      </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="footer__corner"></div>
+      <div class="footer__content">
+        <p>
+          &copy; 2024 LatteLab. Desarrollado por
+          <a href="https://metaldev.com.ar/">Fernando Diaz</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
