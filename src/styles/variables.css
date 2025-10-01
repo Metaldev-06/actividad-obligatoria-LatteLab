@@ -40,6 +40,13 @@ a {
   /* min-height: 100dvh; */
 }
 
+.main__section {
+  width: 95%;
+  max-width: var(--max-width);
+  min-height: calc(100dvh - (var(--header-height) + var(--footer-height)));
+  margin: var(--header-height) auto 0 auto;
+}
+
 .active {
   color: var(--color-primary);
 }

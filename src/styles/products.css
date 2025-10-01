@@ -1,0 +1,93 @@
+main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+
+  .products__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+
+    .products__card {
+      margin-top: 10rem;
+      border-radius: 8px;
+      background-color: var(--color-footer);
+      border-radius: 3rem 3rem 8px 8px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: baseline;
+
+      .products__image {
+        width: 100%;
+        height: 100px;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: contain;
+          object-position: center;
+          margin-bottom: 1rem;
+          position: absolute;
+          top: -100px;
+          left: 0;
+          transition: transform 0.3s ease;
+        }
+      }
+
+      .products__info {
+        padding: 1rem;
+
+        .products__description {
+          font-size: 0.9rem;
+          text-align: left;
+          text-wrap: prettys;
+          height: 63px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .products__info--purchase {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 1rem;
+
+          button {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border: none;
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+              background-color: var(--color-background);
+            }
+
+            &:active {
+              transform: scale(0.95);
+            }
+          }
+        }
+      }
+
+      &:hover {
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        transform: translateY(-5px);
+
+        .products__image {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}

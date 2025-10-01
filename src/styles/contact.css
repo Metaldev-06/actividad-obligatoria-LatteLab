@@ -1,0 +1,18 @@
+.main__section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .contact__header {
+    text-align: center;
+  }
+
+  .contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--color-footer);
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+}
