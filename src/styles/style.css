@@ -54,7 +54,27 @@ header {
             &:hover {
               color: var(--color-primary);
             }
+
+            @media (width <= 560px) {
+              font-size: 0.7rem;
+            }
           }
+        }
+      }
+    }
+
+    @media (width <= 560px) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.3rem;
+
+      .header__logo {
+        img {
+          width: 30px;
+        }
+
+        h1 {
+          font-size: 1.2rem;
         }
       }
     }
@@ -119,6 +139,35 @@ header {
           rotate: 15deg;
         }
       }
+
+      @media (width <= 560px) {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+
+        .hero__text {
+          align-items: center;
+
+          .hero__title {
+            font-size: clamp(1rem, 8vw, 3rem);
+          }
+
+          .hero__description {
+            font-size: clamp(0.6rem, 3vw, 1.5rem);
+          }
+
+          /* .hero__button {
+            font-size: clamp(0.6rem, 3vw, 1.5rem);
+          } */
+        }
+
+        .hero__image {
+          img {
+            width: 200px;
+          }
+        }
+      }
     }
   }
 }
@@ -167,7 +216,7 @@ main {
 
         .about__image {
           img {
-            width: 350px;
+            width: clamp(150px, 100%, 300px);
             height: 350px;
             border-radius: 1rem;
             object-fit: cover;
@@ -192,6 +241,15 @@ main {
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
             color: var(--color-text);
           }
+        }
+      }
+
+      @media (width <= 560px) {
+        flex-direction: column-reverse;
+
+        .about__text {
+          text-align: center;
+          align-items: center;
         }
       }
     }
