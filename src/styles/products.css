@@ -37,6 +37,19 @@ main {
           left: 0;
           transition: transform 0.3s ease;
         }
+
+        .products__discount {
+          position: absolute;
+          top: 30px;
+          left: 20px;
+          background-color: var(--color-secondary);
+          color: var(--color-white);
+          padding: 0.25rem 0.5rem;
+          border-radius: 8px;
+          font-weight: bold;
+          font-size: 0.9rem;
+          display: none;
+        }
       }
 
       .products__info {
@@ -90,4 +103,10 @@ main {
       }
     }
   }
+}
+
+.price-original {
+  color: var(--color-secondary);
+  font-size: 0.8rem;
+  text-decoration: line-through;
 }

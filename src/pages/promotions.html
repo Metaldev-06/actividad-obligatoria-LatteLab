@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LatteLab - Promociones</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <meta
+      name="description"
+      content="LatteLab es una cafetería que ofrece una experiencia única con café de alta calidad y un ambiente acogedor."
+    />
+    <meta name="author" content="Fernando Diaz" />
+
+    <link rel="stylesheet" href="../styles/variables.css" />
+    <link rel="stylesheet" href="../styles/fonts.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/products.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__container">
+        <div class="header__logo">
+          <img
+            src="../assets/images/layout/Coffee.svg"
+            alt="Logo de LatteLab"
+            loading="eager"
+            fetchpriority="high"
+          />
+
+          <h1>Latte<span>Lab</span></h1>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="../../index.html">Inicio</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="products.html">Menú</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="active" href="promotions.html">Promociones</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="about-us.html">Nosotros</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="contact.html">Contacto</a>
+            </li>
+            <li class="header__nav-item">
+              <button
+                class="cart__button"
+                id="cart-button"
+                aria-expanded="false"
+                aria-controls="aside-menu"
+                aria-label="Abrir carrito"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-shopping-cart-icon lucide-shopping-cart"
+                >
+                  <circle cx="8" cy="21" r="1" />
+                  <circle cx="19" cy="21" r="1" />
+                  <path
+                    d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                  />
+                </svg>
+
+                <span class="badge__count" id="badge-count"></span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <aside
+      id="aside-menu"
+      class="aside__menu"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cart-title"
+      aria-hidden="true"
+      tabindex="-1"
+    >
+      <button class="aside__close" id="cart-close" aria-label="Cerrar carrito">
+        ✕ Cerrar
+      </button>
+
+      <h3 id="cart-title" style="margin-bottom: 0.5rem">Tu carrito</h3>
+
+      <div id="cart-container" class="card__cotainer"></div>
+      <div id="cart-summary" class="cart__summary"></div>
+    </aside>
+
+    <div id="aside-overlay" class="aside__overlay"></div>
+
+    <main class="main__section">
+      <h2 class="title__section">Nuestras Promociones</h2>
+
+      <section class="products__container" id="product-container"></section>
+    </main>
+
+    <footer>
+      <div class="footer__corner"></div>
+      <div class="footer__content">
+        <p>
+          &copy; 2025 LatteLab. Desarrollado por
+          <a href="https://metaldev.com.ar/" target="_blank">Fernando Diaz</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../js/promociones.js" type="module"></script>
+  </body>
+</html>
+
+<template id="template-products">
+  <div class="products__card">
+    <div class="products__image">
+      <img
+        src=""
+        alt="Café Irlandés"
+        class="products__image"
+        id="template-card-img"
+      />
+
+      <div class="products__discount" id="template-card-discount">
+        <span id="template-card-discount-value"></span>
+      </div>
+    </div>
+
+    <div class="products__info">
+      <h3 class="products__name" id="template-card-name"></h3>
+      <p class="products__description" id="template-card-description"></p>
+
+      <div class="products__info--purchase">
+        <span class="products__price" id="template-card-price"></span>
+        <span
+          class="products__price--discounted"
+          id="template-card-price-discounted"
+        ></span>
+
+        <button
+          class="button__component products__button"
+          id="template-card-button"
+        >
+          Agregar al Carrito
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template id="template-cart">
+  <div class="template__cart">
+    <span class="cart__id" id="cart-id"></span>
+    <img class="cart__img" src="" alt="" width="50px" id="cart-img" />
+    <div class="cart__discount" id="cart-discount">
+      <span id="cart-discount-value"></span>
+    </div>
+    <span class="cart__title" id="cart-title"></span>
+    <span class="cart__quantity" id="cart-quantity"></span>
+    <span class="cart__price" id="cart-price"></span>
+
+    <div class="btn__actions--cart">
+      <button class="btn btn__plus" id="btn-plus">+</button>
+      <button class="btn btn__remove" id="btn-remove">-</button>
+      <button class="cart__delete" id="btn-delete">Eliminar</button>
+    </div>
+  </div>
+</template>

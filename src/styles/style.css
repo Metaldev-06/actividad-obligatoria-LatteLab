@@ -59,6 +59,30 @@ header {
               font-size: 0.7rem;
             }
           }
+
+          .cart__button {
+            background-color: transparent;
+            border: none;
+            color: var(--color-primary);
+            cursor: pointer;
+            position: relative;
+
+            .badge__count {
+              width: 20px;
+              height: 20px;
+              text-align: center;
+              position: absolute;
+              top: -8px;
+              right: -8px;
+              background-color: var(--color-primary);
+              color: var(--color-white);
+              border-radius: 50%;
+              font-size: 0.8rem;
+              font-weight: bold;
+              line-height: 20px;
+              display: none;
+            }
+          }
         }
       }
     }
