@@ -97,6 +97,19 @@ a {
   opacity: 0;
   transition: transform 0.25s ease, opacity 0.25s ease;
 
+  @media (width <= 980px) {
+    width: 100%;
+  }
+
+  @media (width <= 480px) {
+    font-size: 0.8rem;
+    padding: 0 1rem;
+
+    .card__container {
+      gap: 0.3rem;
+    }
+  }
+
   .card__container {
     display: flex;
     flex-direction: column;
@@ -138,6 +151,11 @@ a {
   gap: 1rem;
   padding: 1rem;
   position: relative;
+
+  @media (width <= 480px) {
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
 
   .cart__title {
     width: 120px;

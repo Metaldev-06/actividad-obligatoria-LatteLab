@@ -87,7 +87,7 @@ header {
       }
     }
 
-    @media (width <= 560px) {
+    @media (width <= 700px) {
       flex-direction: column;
       justify-content: center;
       gap: 0.3rem;
