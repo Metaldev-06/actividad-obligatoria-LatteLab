@@ -20,44 +20,56 @@ const extraDiscountRate = 0.3;
 let lastFocusedEl = null;
 let cart = {};
 
-function openCart() {
+const openCart = () => {
   if (!aside) return;
+
   lastFocusedEl = document.activeElement;
   aside.classList.add("is-open");
   overlay.classList.add("is-open");
+
   document.body.classList.add("body--locked");
   aside.setAttribute("aria-hidden", "false");
   btnCart?.setAttribute("aria-expanded", "true");
   aside.focus();
-}
-function closeCart() {
+};
+
+const closeCart = () => {
   if (!aside) return;
+
   aside.classList.remove("is-open");
   overlay.classList.remove("is-open");
+
   document.body.classList.remove("body--locked");
   aside.setAttribute("aria-hidden", "true");
   btnCart?.setAttribute("aria-expanded", "false");
+
   if (lastFocusedEl && typeof lastFocusedEl.focus === "function")
     lastFocusedEl.focus();
-}
-function toggleCart() {
+};
+
+const toggleCart = () => {
   if (aside.classList.contains("is-open")) closeCart();
   else openCart();
-}
+};
+
 btnCart?.addEventListener("click", toggleCart);
 btnClose?.addEventListener("click", closeCart);
 overlay?.addEventListener("click", closeCart);
+
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && aside.classList.contains("is-open")) closeCart();
 });
+
 aside.addEventListener("keydown", (e) => {
   if (e.key !== "Tab") return;
   const focusables = aside.querySelectorAll(
     'button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
+
   if (!focusables.length) return;
   const first = focusables[0];
   const last = focusables[focusables.length - 1];
+
   if (e.shiftKey && document.activeElement === first) {
     e.preventDefault();
     last.focus();
@@ -90,9 +102,11 @@ const showProductsHome = (list) => {
     if (hasDiscount) {
       clone.getElementById("template-card-price-discounted").textContent =
         "$" + discountedPrice.toFixed(2);
+
       const priceEl = clone.getElementById("template-card-price");
       priceEl.textContent = "$" + item.price;
       priceEl.classList.add("price-original");
+
       const discountDiv = clone.getElementById("template-card-discount");
       discountDiv.style.display = "block";
       clone.getElementById(
@@ -124,6 +138,7 @@ const showCart = () => {
     clone.querySelector("#cart-title").textContent = p.name;
     clone.querySelector("#cart-quantity").textContent = p.quantity;
     clone.querySelector("#cart-title").textContent = p.name;
+
     const discountDiv = clone.querySelector("#cart-discount");
     if (p.discountPercent > 0) {
       discountDiv.style.display = "block";
@@ -211,6 +226,7 @@ asideCart.addEventListener("click", (e) => {
 
 const paintCartBadge = () => {
   const totalQty = Object.values(cart).reduce((acc, p) => acc + p.quantity, 0);
+
   if (!totalQty) {
     badge.style.display = "none";
   } else {
@@ -312,6 +328,7 @@ function renderSummary() {
 
 document.addEventListener("DOMContentLoaded", () => {
   const saved = localStorage.getItem("cart");
+
   if (saved) {
     try {
       cart = JSON.parse(saved) || {};
