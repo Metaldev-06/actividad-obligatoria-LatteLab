@@ -1,6 +1,5 @@
 import { products } from "../data/data.js";
 
-//!Products Template
 const productsContainer = document.getElementById("product-container");
 const templateCards = document.getElementById("template-products").content;
 
